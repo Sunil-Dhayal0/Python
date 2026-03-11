@@ -12,6 +12,7 @@ print('i' not in 'sunil')
 
 num1 = int(input('enter the value of number'))
 
+#### arithmetic operators
 
 d1 = num1%10
 
@@ -23,3 +24,4 @@ d3 = int(num1%10)
 
 sum = d1+d2+d3
 print(sum)
+
