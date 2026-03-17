@@ -1,87 +1,53 @@
-#1. combine two lists index-wise
-list1 = ["ma","na","i","kh"]
-list2 = ["y","me","s","an"]
+# Question 1 – Student Management System
+# Create a Python class Student to manage student information.
 
-listoftuple = list(zip(list1,list2))
-print(listoftuple)
+# The class should have the following features:
 
-ans = [[i,j] for(i,j) in listoftuple]
-print('problem_01',ans)
+# A class variable school_name set to "CDAC : AI Learning Academy".
 
-#2.add item in 3d list 
+# A constructor (__init__) that accepts:
 
-list = [10,20,20,[40,50,60,[40,50,80]]]
-list[3][3].append(7000)
-print(list)
+# student name
+# age
+# course
+# A method display_info() to display the student details:
 
-#3.
+# Student Name
+# Age
+# Course
+# School Name
+# A method is_adult() that checks whether the student is an adult (age ≥ 18).
 
-candy_list = ['5-star','dairy-milk','kitkat']
-no_of_item = [2,3,6]
-
-for (i,j) in zip(candy_list,no_of_item):
-    print(i,j)
-
-#4. sum list item
-
-list = [2,3,1,2,4,5]
-print(list)
-# sum = 0
-# for i in list:
-#       sum+=i
-# print(sum)
-
-#5.you have to add numbers which are in list and greater than the current number 
-
-result = []
-list = [2,3,1,2,4,5]
-for i in list:
-     sum = 0
-     for j in list:
-        if j >= i:
-         sum+=j
-     result.append(sum) 
+# Application Task
+# Create two student objects with different details.
+# Display their information.
+# Check whether each student is an adult.
 
 
-print(result)
+class Student:
 
-#6.find list of common unique items from two list . and show in increasing order
+    school_name = "CDAC : AI Learning Academy"
 
-num1 = [4,3,2,1,5]
-num2 = [6,3,8,2,9]
-common = []
+    def __init__(self,student_name,age,course):
+        self.studentName = student_name
+        self.sAge  = age
+        self.scourse = course
+ 
+    def display_info1(cls):
+         print(f'student school name is {cls.school_name}')
+         
 
-for i in num1:
-   if i  not in common:
-        common.append(i)
+    def display_info(self):
+        print(f'student name is {self.studentName}')
+        print(f'student age is {self.sAge} ')
+        print(f'student course is {self.scourse}')   
+        self.display_info1()  
 
-print(common)            
+    def is_adult(self):
+        if self.sAge > 18:
 
-#7.Sort a list of alphanumeric strings based on product value of numeric character in it. 
-# If in any string there is no numeric character take it's product value as 1.
+            print(f" {self.studentName} is adult")        
 
-# data_list = ['1ac21', '23fg', '456', '098d','1','kls']
-# product_val = []
-
-# for item in list:
-#     product = 1
-#     for char in item:
-#         if char.isdigit():
-#             product = product*int(item)
-#     product_val.append(product)  
-    
-
-# print(product_val)
-# sorted_l = [i[1] for i in sorted(list(zip(product_val,data_list)))]
-# product_val(sorted_l)
-
-#8.Split String of list on K character.
-
-l = ['CampusX is a channel', 'for data-science', 'aspirants.']
-
-inp = ' '
-result = []
-for i in l:
-    print(i.split(inp))
-    result.extend(i.split(inp))
-print(result)
+student1 = Student("sunil",23,"Ai")
+student1.display_info()
+student1.is_adult()
