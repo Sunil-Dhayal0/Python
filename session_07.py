@@ -73,15 +73,16 @@ class employee:
     def __init__(self,name):
         self.name = name
 
+emp2 = employee('sunil')
 
 # constructor-------  special method invoke automatically when an object of class created
 # syntax: __init__()
 
-#-initiaized object varianle
+#- initiaized object variable
 #- assign initial value to object properties.
 #- constructor executes when an object is created.
 
-#- default constructor -> automaticallu when object created default value asigned to attribute
+#- default constructor -> automatically when object created and default value asigned to attribute
 
 class Abc:
     def __init__(self):
