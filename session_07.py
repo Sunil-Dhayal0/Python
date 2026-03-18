@@ -81,7 +81,7 @@ emp2 = employee('sunil')
 #- initiaized object variable
 #- assign initial value to object properties.
 #- constructor executes when an object is created.
-
+#- we can't create more than one constructor
 #- default constructor -> automatically when object created and default value asigned to attribute
 
 class Abc:
