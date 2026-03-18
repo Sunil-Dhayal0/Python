@@ -180,30 +180,22 @@ e.diplay()
 print(employee.mro())
 
 
-#Is-A realtiinship
+#Is-A realtiinship and Has-A relationship
 
-#it is realtionship  defines inheritance.
+# it is realtionship  defines inheritance.
 # one class is a specialized form of another class
 # child class is a type of parent class
-# meaning sing inheritance B(A): Bclass is-a Aclass
+# meaning sing inheritance B(A): B class Is-A A class
 
 #Has-A realtionship
 # it means one class contains object of another class
 # it is achived using composition and aggregation
-# one object uses another object as amenmber
+# one object uses another object as a member
 # meaning: B Has-A A 
+
+
 #ex
 # car has-A engine
 # employee has_a address
 
 
-class A:
-    def __init__(self):
-        pass
-
-class B:
-    def __init__(self):
-        self.s1 = A() #B ahs _a a
-    def m2(self):
-        print("class B : m2()")
-        self.s1.m1()
