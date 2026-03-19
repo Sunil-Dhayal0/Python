@@ -247,23 +247,23 @@ from abc import ABC,abstractmethod
 #       -method stop()
 #     child class motorbike
 
-# class vehicle(ABC):
+class vehicle(ABC):
       
-#        @abstractmethod
-#        def start(self):
-#            print('start')
-#        def stop(self):
-#            print('stop')
+       @abstractmethod
+       def start(self):
+           print('start')
+       def stop(self):
+           print('stop')
 
-# class moterbike(vehicle):
-#     def start(self):
-#         return super().start()
-#     def stop(self):
-#         return super().stop()
+class moterbike(vehicle):
+    def start(self):
+        return super().start()
+    def stop(self):
+        return super().stop()
 
-# m1 = moterbike()
+m1 = moterbike()
 
-# m1.start()
+m1.start()
 
 
 #interview important -> difference between normal vs abstract class

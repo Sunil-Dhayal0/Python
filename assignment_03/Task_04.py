@@ -20,8 +20,6 @@ class ABC:
     @abstractmethod
     def area_of_rectangle(self,length,breath):
         self.area = length*breath
-    def display(self,area):
-        print(f"area of is {self.area}")
 
 class circle:
 
@@ -30,7 +28,8 @@ class circle:
     def area_of_circle(self):
          self.area = 3.14*self.radius*self.radius
     def display(self):
-        super().display(self.area)
+        print(f'area of cicle {self.area}')
+        
         
 class rectangle:
 
@@ -38,9 +37,10 @@ class rectangle:
          self.length = length
          self.breath = breath
     def area_of_rectangle(self):
-        self.area = self.length*self.breath      
+        self.area = self.length*self.breath   
     def display(self):
-        super().display(self.area)
+        print(f'area of rectangle {self.area}')         
+    
 
 
 c1 = circle(2)
@@ -48,3 +48,5 @@ r1 = rectangle(3,4)
 
 c1.area_of_circle()
 c1.display()
+r1.area_of_rectangle()
+r1.display()

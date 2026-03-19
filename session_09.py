@@ -1,19 +1,19 @@
 ########---------- decorator example
-# class Product:
-#     def __init__(self,price):
-#         self.__price = price
+class Product:
+    def __init__(self,price):
+        self.__price = price
 
-#     @property
-#     def price(self):
-#         return self.__price
-#     @price.setter
-#     def price(self,amount):
-#         self.__price += amount
+    @property
+    def price(self):
+        return self.__price
+    @price.setter
+    def price(self,amount):
+        self.__price += amount
     
-# p = Product(500)
-# print(p.price)
-# p.price = 500
-# print(p.price)
+p = Product(500)
+print(p.price)
+p.price = 500
+print(p.price)
 
 
 #######---------- Inheritance:
@@ -152,32 +152,32 @@
 
 # multi-level parent ->  employee second  -> manager  last one -> admin
 
-class admin:
+# class admin:
 
-    def display(self):
-        print("i am the admin")
-    def __init__(self):
-        print('class admin')
+#     def display(self):
+#         print("i am the admin")
+#     def __init__(self):
+#         print('class admin')
 
-class manager:
+# class manager:
 
-    def display(self):
-        print('i am a manager')
-    def __init__(self):
-        print('class manager')
+#     def display(self):
+#         print('i am a manager')
+#     def __init__(self):
+#         print('class manager')
 
-class employee(admin,manager):
+# class employee(admin,manager):
     
-    def diplay(self):
-        # super()
-        print('i am employee')
-    def __init__(self):
-        print('class employee')
+#     def diplay(self):
+#         # super()
+#         print('i am employee')
+#     def __init__(self):
+#         print('class employee')
 
 
-e = employee()
-e.diplay()
-print(employee.mro())
+# e = employee()
+# e.diplay()
+# print(employee.mro())
 
 
 #Is-A realtiinship and Has-A relationship
