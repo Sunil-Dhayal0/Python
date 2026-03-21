@@ -167,16 +167,39 @@
 # divide(10,0)
 
 
-class insuffientBalanceError(Exception):
-    pass
+# class insuffientBalanceError(Exception):
+#     pass
 
-def withdraw(balance,amount):
-    if amount > balance:
-        raise insuffientBalanceError("not sufficient balance......")
+# def withdraw(balance,amount):
+#     if amount > balance:
+#         raise insuffientBalanceError("not sufficient balance......")
     
-    return balance-amount
+#     return balance-amount
+
+# try:
+#     balance = withdraw(3000,5000)
+# except insuffientBalanceError as e:
+#     print("custom exception is defined......................",e)
+
+##########------- example of raise error
+
+class Bank:
+    def __init__(self,balance):
+        self.balance = balance
+    def withdraw(self,amount):
+        if amount < 0:
+          raise Exception("amount can't be negative")
+        if self.balance < amount:
+            raise Exception("paisa nhi h tere pass")
+        self.balance = self.balance - amount
+
+
+obj = Bank(500)
 
 try:
-    balance = withdraw(3000,5000)
-except insuffientBalanceError as e:
-    print("custom exception is defined......................",e)
+    obj.withdraw(100)
+except Exception as e:
+    print(e)
+else:
+    print(obj.balance)
+

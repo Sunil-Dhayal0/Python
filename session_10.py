@@ -27,16 +27,16 @@
 # to support indexing like obj[0]
 
 
-class Test:
-    def __init__(self,name):
-        self.name = name
+# class Test:
+#     def __init__(self,name):
+#         self.name = name
     
-    def __str__(self):
-        return f'employeeName:{self.name}'
-    def __len__(self):
-        return len(self.name)
-    def __add__(self, other):
-        return self.name + other
+#     def __str__(self):
+#         return f'employeeName:{self.name}'
+#     def __len__(self):
+#         return len(self.name)
+#     def __add__(self, other):
+#         return self.name + other
 
 
 
@@ -48,8 +48,8 @@ class Test:
 
 # print(t1+t2)
 
-name = 'sunil'
-sal = 300
+# name = 'sunil'
+# sal = 300
 
 # method 4. using formate()
 # print("name  = {0}, salary = {1}".format(name,sal))
@@ -194,22 +194,22 @@ sal = 300
 # ex A house has room
 
 
-# class Room:
-#     def __init__(self,room_type):
-#         self.room_type = room_type
+class Room:
+    def __init__(self,room_type):
+        self.room_type = room_type
 
-# class House:
-#     def __init__(self):
-#         self.r1 = Room("kitchen")
-#         self.r2 = Room("Balcony")
+class House:
+    def __init__(self):
+        self.r1 = Room("kitchen")
+        self.r2 = Room("Balcony")
 
-#     def display(self):
-#         print(f'House have {self.r1.room_type} and {self.r2.room_type}')
+    def display(self):
+        print(f'House have {self.r1.room_type} and {self.r2.room_type}')
 
 
-# h1 = House()
+h1 = House()
 
-# h1.display()
+h1.display()
 
 
 # polymorphism:
@@ -247,18 +247,18 @@ sal = 300
 
 # example of run time polymorphism
 
-class A:
-    def m1(self):
-        print("class A : m1()")
+# class A:
+#     def m1(self):
+#         print("class A : m1()")
 
-class B(A):
-    def m1(self):
-        print("class B :m1() : child class")
+# class B(A):
+#     def m1(self):
+#         print("class B :m1() : child class")
 
 
-b1 = B()
+# b1 = B()
 
-b1.m1()
+# b1.m1()
 
 
 #  polymorphism -> operator overloading example + 
